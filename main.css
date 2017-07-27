@@ -22,7 +22,7 @@
   color: #fff;
   text-align: center;
   line-height: 40px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .banner span {
   line-height: 40px;
@@ -33,7 +33,7 @@
   line-height: 15px;
   padding-left: 2px;
   padding-right: 2px;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .title {
@@ -51,8 +51,8 @@
   padding: 2px 3px;
   background-color: cornflowerblue;
   border-radius: 2px;
-  color: red;
-  font-size: 14px;
+  color: white;
+  font-size: 12px;
   vertical-align: middle;
 }
 .title .time {
@@ -64,6 +64,7 @@
 .details {
   margin: 20px;
   font-size: 15px;
+  color:#3b3b3b
 }
 
 .details p {
