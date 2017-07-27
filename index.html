@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name ="viewport" content ="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Title</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<div class="banner">
+  <div>
+    <p>
+      <span id="t_d"></span>
+      <small>天</small>
+      <span id="t_h"></span>
+      <small>时</small>
+      <span id="t_m"></span>
+      <small>分</small>
+      <span id="t_s"></span>
+      <small>秒</small>
+    </p>
+  </div>
+</div>
+<div class="title">
+  <p>远洋集团2017新技术引领大会<span class="appointment">预约</span></p>
+  <p class="time">时间: 2017-08-04 08:00:00</p>
+</div>
+<div class="details">
+  <p class="intro">活动简介</p>
+  <p>会议时间: 2017年8月4日 (周五)</p>
+  <p>会议地点: 北京金隅喜来登酒店 (中国北京市东城区北三环东路36号)</p>
+</div>
+</body>
+
+<script type="text/javascript">
+	function getRTime(){
+		const EndTime= new Date('2017/08/04 08:12:00');
+		const NowTime = new Date();
+		const t =EndTime.getTime() - NowTime.getTime();
+
+
+		let d=Math.floor(t/1000/60/60/24);
+		d = '0' + d;
+
+		let h=Math.floor(t/1000/60/60%24);
+		if (h < 10) {
+			h = '0' + h;
+    }
+
+    let m=Math.floor(t/1000/60%60);
+    if (m < 10) {
+    	m = '0' + m;
+    }
+
+		let s=Math.floor(t/1000%60);
+		if(s < 10) {
+			s = '0' + s;
+    }
+
+		document.getElementById("t_d").innerHTML = d;
+		document.getElementById("t_h").innerHTML = h;
+		document.getElementById("t_m").innerHTML = m;
+		document.getElementById("t_s").innerHTML = s;
+	}
+	setInterval(getRTime,1000);
+</script>
+</html>
